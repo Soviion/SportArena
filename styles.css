@@ -128,7 +128,7 @@ body {
     font-weight: 600;
 }
 
-/* ====================== КАРТОЧКИ СОБЫТИЙ ====================== */
+/* ====================== КАРТОЧКИ СОБЫТИЙ (ДАТА СВЕРХУ) ====================== */
 .cards {
     display: flex;
     gap: 30px;
@@ -167,16 +167,27 @@ body {
     z-index: 1;
 }
 
-/* Градиент + контент (как в Figma) */
+/* Контент с датой сверху */
 .card__content {
     position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 32px 28px 28px;
-    background: linear-gradient(to top, rgba(0,0,0,0.75), transparent);
+    inset: 0;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     z-index: 2;
     color: white;
+}
+
+.card-date {
+    font-size: 13.5px;
+    opacity: 0.95;
+    display: block;
+    align-self: flex-start;
+    background: rgba(0,0,0,0.4);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-weight: 500;
 }
 
 .card-tag {
@@ -189,22 +200,17 @@ body {
     border-radius: 30px;
     margin-bottom: 12px;
     letter-spacing: 0.5px;
-}
-
-.card-date {
-    font-size: 13.5px;
-    opacity: 0.95;
-    margin-bottom: 8px;
-    display: block;
+    align-self: flex-start;
 }
 
 .card h3 {
     font-size: 20px;
     font-weight: 700;
     line-height: 1.3;
+    margin-top: auto;
 }
 
-/* ====================== ИНФО-БЛОКИ ====================== */
+/* ====================== ИНФО-БЛОКИ (ТОНКАЯ ГАЛОЧКА В КРУЖОЧКЕ) ====================== */
 .info-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -214,16 +220,33 @@ body {
 
 .info-block {
     display: flex;
-    gap: 16px;
+    gap: 18px;
+    align-items: flex-start;
 }
 
 .info-block::before {
-    content: "✓";
-    font-size: 26px;
-    color: #4f6fad;
-    font-weight: bold;
+    content: '';
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    border: 2px solid #4f6fad;
+    border-radius: 50%;
     flex-shrink: 0;
-    margin-top: -4px;
+    margin-top: 2px;
+    position: relative;
+}
+
+.info-block::after {
+    content: '✓';
+    position: absolute;
+    color: #4f6fad;
+    font-size: 18px;
+    font-weight: 700;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .info-block h3 {
