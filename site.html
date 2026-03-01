@@ -10,7 +10,6 @@
     <!-- Skip-link для доступности -->
     <a href="#main" class="skip-link">Перейти к основному содержимому</a>
 
-    <!-- HEADER -->
     <header class="header">
         <div class="container">
             <a href="/" class="logo">SportArena</a>
@@ -27,20 +26,18 @@
             </nav>
 
             <div class="header__icons">
-                <span class="icon" aria-label="Уведомления">🛎️</span>
-                <span class="icon" aria-label="Поиск">🔍</span>
-                <span class="icon" aria-label="Профиль">👤</span>
+                <button class="icon" aria-label="Уведомления">🛎️</button>
+                <button class="icon" aria-label="Профиль">👤</button>
+                <button class="icon" aria-label="Поиск">🔍</button>
             </div>
         </div>
     </header>
 
-    <!-- MAIN -->
-    <main id="main" class="container">
 
-        <!-- МАТЧИ -->
-        <h2 class="section-title">Матчи</h2>
+    <main id="main" class="container">
         <section class="matches">
-            <!-- Испания -->
+            <h2 class="section-title">Матчи</h2>
+            
             <div class="match-column">
                 <div class="match-header">Испания — Примера. 24-й тур</div>
                 <div class="match-row"><span class="time">16:00</span><span class="teams">Овердо — Атлетик Б</span><span class="status">Не начался</span></div>
@@ -48,7 +45,7 @@
                 <div class="match-row"><span class="time">20:30</span><span class="teams">Леванте — Валенсия</span><span class="status">Не начался</span></div>
                 <div class="match-row"><span class="time">23:00</span><span class="teams">Мальорка — Бетис</span><span class="status">Не начался</span></div>
             </div>
-            <!-- Италия -->
+           
             <div class="match-column">
                 <div class="match-header">Италия — Серия А. 25-й тур</div>
                 <div class="match-row"><span class="time">14:30</span><span class="teams">Удинезе — Сассуоло</span><span class="status finished">Окончен 1:2</span></div>
@@ -58,39 +55,39 @@
             </div>
         </section>
 
-        <!-- КАРТОЧКИ СОБЫТИЙ (ДАТА СВЕРХУ) -->
+        <!-- КАРТОЧКИ-->
         <div class="cards">
-            <!-- Большая карточка -->
             <article class="card card-large" itemscope itemtype="https://schema.org/SportsEvent">
                 <img src="images/palova-snowball.jpg" alt="Palova-Snowball 3x3" class="bg-img" itemprop="image">
                 <div class="card__content">
                     <time class="card-date" itemprop="startDate" datetime="2026-02-14">14-15 февраля 2026</time>
                     <div class="card-tag">БАСКЕТБОЛ</div>
                     <h3 itemprop="name">Palova-Snowball 3x3. Турнир имени Ермашова 2026</h3>
+                    <meta itemprop="location" content="Минск, Беларусь">
+        
                 </div>
             </article>
 
-            <!-- Две маленькие карточки -->
             <div class="card-group">
-                <!-- Хоккей -->
                 <article class="card card-small" itemscope itemtype="https://schema.org/SportsEvent">
                     <img src="images/hockey-klh.jpg" alt="Хоккей КХЛ" class="bg-img" itemprop="image">
                     <div class="card__content">
                         <time class="card-date" itemprop="startDate" datetime="2026-02-15">15.02.2026</time>
                         <div class="card-tag">ХОККЕЙ</div>
                         <h3 itemprop="name">Хоккей. КХЛ. Спартак — Динамо Минск</h3>
+                        <meta itemprop="location" content="Минск, Беларусь">
                         <div style="display:none" itemprop="competitor" itemscope itemtype="https://schema.org/SportsTeam"><span itemprop="name">Спартак</span></div>
                         <div style="display:none" itemprop="competitor" itemscope itemtype="https://schema.org/SportsTeam"><span itemprop="name">Динамо Минск</span></div>
                     </div>
                 </article>
 
-                <!-- Баскетбол -->
                 <article class="card card-small" itemscope itemtype="https://schema.org/SportsEvent">
                     <img src="images/basketball-champ.jpg" alt="Баскетбол Чемпионат Беларуси" class="bg-img" itemprop="image">
                     <div class="card__content">
                         <time class="card-date" itemprop="startDate" datetime="2026-02-15">15.02.2026</time>
                         <div class="card-tag">БАСКЕТБОЛ</div>
                         <h3 itemprop="name">Баскетбол. Чемпионат Беларуси. Гомельские Рыси — Горизонт-2-РЦОП</h3>
+                        <meta itemprop="location" content="Минск, Беларусь">
                         <div style="display:none" itemprop="competitor" itemscope itemtype="https://schema.org/SportsTeam"><span itemprop="name">Гомельские Рыси</span></div>
                         <div style="display:none" itemprop="competitor" itemscope itemtype="https://schema.org/SportsTeam"><span itemprop="name">Горизонт-2-РЦОП</span></div>
                     </div>
@@ -98,7 +95,6 @@
             </div>
         </div>
 
-        <!-- ИНФО-БЛОКИ (полный текст + галочки в кружочке) -->
         <div class="info-grid">
             <div class="info-block">
                 <h3>Онлайн трансляции спорта</h3>
@@ -126,7 +122,6 @@
             </div>
         </div>
 
-        <!-- СТАТИСТИКА (все 10 команд) -->
         <section class="statistics">
             <h2 class="section-title">Статистика</h2>
             <table>
@@ -156,7 +151,6 @@
 
     </main>
 
-    <!-- FOOTER -->
     <footer class="footer">
         <div class="container">
             <p>© championat.com 2000-2026</p>
